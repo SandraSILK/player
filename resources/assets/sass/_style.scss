@@ -1,0 +1,36 @@
+body {
+    background-color: map-get($gradient-colors, normal);
+    font-family: Raleway;
+}
+
+.m-top-100 {
+    margin-top: 100px;
+}
+
+.hero {
+    background: url('../images/hero.jpg');
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 25vh;
+
+    h1 {
+        background: rgba(123, 130, 183, .2);
+        color: map-get($gradient-colors, dark);
+        padding: 15px 0;
+        font-size: $h1;
+    }
+
+    p,
+    a {
+        color: map-get($gradient-colors, dark);
+        font-size: 1.5rem;
+        font-size: $normal-size;
+    }
+
+    a:hover {
+        text-decoration: none;
+        border-bottom: 1px solid map-get($gradient-colors, dark);
+    }
+}

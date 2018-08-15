@@ -1,0 +1,168 @@
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    background-color: map-get($gradient-colors, normal);
+    background: -moz-linear-gradient($gradient);
+    background: -webkit-linear-gradient($gradient);
+    background: -o-linear-gradient($gradient);
+    background: -ms-linear-gradient($gradient);
+    background: linear-gradient(to $gradient);
+    font-family: Raleway;
+    height: 100%;
+}
+
+#app {
+    max-height: calc(100vh - 36px);
+}
+
+nav {
+	background-color: map-get($gradient-colors, dark);
+	color: lighten(map-get($gradient-colors, light), 50%);
+
+	.btn:hover {
+		color: lighten(map-get($gradient-colors, light), 30%);
+	}
+}
+
+.playlist {
+    padding: 15px 20px;
+}
+
+.playlist,
+.player {
+    background-color: $card;
+    margin-top: 15vh;
+    border-radius: 12px;
+    height: 60vh;
+    // overflow-y: auto;
+
+    h6 {
+        font-size: $normal-size;
+    }
+
+    .list {
+        margin-top: 20px;
+        height: 40vh;
+        overflow-y: auto;
+
+        img:hover {
+            opacity: .5;
+        }
+    }
+
+    table {
+        margin-top: 20px;
+
+        tr:hover {
+            background-color: lighten(map-get($gradient-colors, light), 50%);
+        }
+
+        td {
+            border-bottom: 1px solid #dadce4;
+            padding-top: 20px
+        }
+
+        td:first-child {
+            width: 79%;
+        }
+    }
+}
+
+.circle {
+    background-color: $white;
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    padding-top: 5px;
+}
+
+.icon-xs {
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+}
+
+.icon-md {
+    height: 30px;
+    width: 30px;
+    margin: 0 5px;
+}
+
+.icon-lg {
+    height: 45px;
+    width: 45px;
+    margin: 0 5px;
+}
+
+.title {
+    color: $dark-font;
+}
+
+.description {
+    margin-bottom: 2px;
+    font-size: $small;
+    color: $gray;
+}
+
+.player {
+    padding: 0;
+
+    p {
+        padding: 25px 30px;
+        font-size: $normal-size;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    display: block; 
+}
+
+.options {
+    background-color: rgba(44, 22, 62, .5);
+    padding: 20px 0;
+    @include radius-top;
+}
+
+.cover {
+    height: 40vh;
+    @include radius-top;
+    position: relative;
+}
+
+.main-title {
+    background-color: rgba(44, 22, 62, .5);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0;
+
+    p:last-child {
+        margin-top: -10px;
+        font-size: $small;
+    }
+
+    p {
+        padding: 0;
+        margin: 0;
+        color: $white;
+    }
+}
+
+.play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+
+    img:hover {
+        opacity: .5;
+    }
+}
