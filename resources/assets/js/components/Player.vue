@@ -63,12 +63,12 @@
         },
         methods: {
             playMusic: function() {
-                this.play = false;
-                this.stop = true;
-            },
-            stopMusic: function() {
                 this.play = true;
                 this.stop = false;
+            },
+            stopMusic: function() {
+                this.play = false;
+                this.stop = true;
             },
             next: function(event) {
                 const id = event.currentTarget.dataset.id;
