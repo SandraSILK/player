@@ -15,7 +15,7 @@ class UsersSeeder extends Seeder
             'name'     => 'Joe',
             'email'    => 'joe.doe@example.com',
             'password' => Hash::make('password123'),
-            'password' => Hash::make('joe.doe@example.com'),
+            'api_token' => Hash::make('joe.doe@example.com'),
         ]);
     }
 }
