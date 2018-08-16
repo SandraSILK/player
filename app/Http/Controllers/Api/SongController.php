@@ -8,12 +8,6 @@ use Illuminate\Http\Request;
 
 class SongController extends Controller
 {
-    public function previous(Song $song)
-    {
-        // $song = Song::find($song->id)->
-        return 'kotek';
-    }
-
     public function next($id)
     {
         $songs = Song::all();

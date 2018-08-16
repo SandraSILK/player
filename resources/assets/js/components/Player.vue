@@ -10,9 +10,8 @@
                     <div class="main-title text-center">
                         <p class="font-weight-bold">{{ song.artist }}</p>
                         <p>{{ song.title }}</p>
-                        <h1>{{ song.id }}</h1>
                     </div>
-                </div>            
+                </div>
             </section>
             <section>
                 <div class="play text-center">

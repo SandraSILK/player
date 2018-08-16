@@ -47,7 +47,7 @@
 
                 axios.get(url)
                     .then((response) => {
-                        console.log(response);
+                        this.$emit('choose-song', response.data)
                     })
                     .catch(function(error) {
                         console.log(error);
@@ -57,33 +57,30 @@
             prev: function(id)
             {
                 const songs = this.songs;
-                const current = Number(id);
-                const prevSong = current - 1;
+                const first = songs[Object.keys(songs)[0]].id;
 
-                if (current === 0){
-                    console.log('początek');
+                if (first == id) {
+                    Object.keys(songs);
+                    const song = songs[Object.keys(songs)[Object.keys(songs).length - 1]];
+                    this.$emit('choose-song', song);
+                } else {
+                    const current = id;
+
+                    for (let id in songs) {
+                        const song = songs[id].id;
+                        const index = _.findKey(songs, function(song) {
+                            return song.id == current;
+                        });
+                        const indexNum = Number(index);
+                        this.$emit('choose-song', songs[indexNum - 1]);
+                    }
                 }
-
-                const song = songs[prevSong];
-
-                // const url = `api/song-previous/${song.id}`;
-
-                // axios.get(url)
-                //     .then((response) => {
-                //         console.log(response);
-                //     })
-                //     .catch(function(error) {
-                //         console.log(error);
-                //     })
-
-                
-                console.log(song);
             },
         },
         methods: {
             choose: function(song) {
                 this.$emit('choose-song', song);
-            }
+            },
         }
     }
 </script>
