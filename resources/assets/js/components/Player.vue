@@ -10,6 +10,7 @@
                     <div class="main-title text-center">
                         <p class="font-weight-bold">{{ song.artist }}</p>
                         <p>{{ song.title }}</p>
+                        <h1>{{ song.id }}</h1>
                     </div>
                 </div>            
             </section>
@@ -69,7 +70,7 @@
             },
             prev: function(event) {
                 const id = event.currentTarget.dataset.id;
-                this.$emit('next', id);
+                this.$emit('prev', id);
             },
             backToList: function() {
                 this.isHide = false;

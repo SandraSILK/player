@@ -43,16 +43,16 @@
         },
         watch: {
             next: function(id) {
-                const songs = this.songs;
-                const current = Number(id);
-                const nextSong = current + 1;
+                const url = `api/song-next/${id}`;
 
-                if (nextSong >= songs.length){
-                    console.log('koniec')
-                }
+                axios.get(url)
+                    .then((response) => {
+                        console.log(response);
+                    })
+                    .catch(function(error) {
+                        console.log(error);
+                    })
 
-                const song = songs[nextSong];
-                console.log(song);
             },
             prev: function(id)
             {
@@ -65,6 +65,18 @@
                 }
 
                 const song = songs[prevSong];
+
+                // const url = `api/song-previous/${song.id}`;
+
+                // axios.get(url)
+                //     .then((response) => {
+                //         console.log(response);
+                //     })
+                //     .catch(function(error) {
+                //         console.log(error);
+                //     })
+
+                
                 console.log(song);
             },
         },
