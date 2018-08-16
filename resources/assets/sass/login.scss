@@ -38,10 +38,10 @@ nav {
     margin-top: 15vh;
     border-radius: 12px;
     height: 60vh;
-    // overflow-y: auto;
 
     h6 {
         font-size: $normal-size;
+        margin-left: 22%;
     }
 
     .list {
@@ -78,6 +78,12 @@ nav {
     height: 35px;
     border-radius: 30px;
     padding-top: 5px;
+}
+
+.icon-xxs {
+    width: 14px;
+    height: 14px;
+    margin-top: 5px;
 }
 
 .icon-xs {
@@ -165,4 +171,33 @@ nav {
     img:hover {
         opacity: .5;
     }
+}
+
+.left-icon {
+    position: absolute;
+    left: 20px;
+}
+.right-icon {
+    position: absolute;
+    right: 20px;
+}
+
+.progress {
+    background-color: $pink;
+    height: 6px;
+    border-radius: 0;
+}
+
+.progress-bar {
+    width: 73%;
+    background-color: $white;
+}
+
+.loudspeaker {
+    position: absolute;
+    left: 71%;
+    width: 25px;
+    height: 25px;
+    background-color: $white;
+    border-radius: 30px;
 }

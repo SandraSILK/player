@@ -31,6 +31,7 @@ $dark-font: #473660;
 $light-font: #eae9ed;
 $white: #fff;
 $gray: #adabb3;
+$pink: #ed5e74;
 
 /**fonts**/
 $h1: 2.5rem;
@@ -38,6 +39,6 @@ $normal-size: 1.5rem;
 $small: 0.9rem;
 
 @mixin radius-top {
-	border-top-right-radius: 12px;
-	border-top-left-radius: 12px;
+	border-top-right-radius: 9px;
+	border-top-left-radius: 9px;
 }
